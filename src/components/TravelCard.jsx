@@ -1,4 +1,4 @@
-function TravelCard({plan, deleteItem}) {
+function TravelCard({plan, deleteItem, addItem}) {
   return (
     <div key={plan.id} className="item-container">
       <div className="image-container">
@@ -20,6 +20,9 @@ function TravelCard({plan, deleteItem}) {
       </div>
       <button className="delete-btn" onClick={() => deleteItem(plan.id)}>
         Delete
+      </button>
+      <button className="add-btn" onClick={() => addItem(plan.id)}>
+        ♡
       </button>
     </div>
   );

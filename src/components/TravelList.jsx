@@ -15,7 +15,12 @@ function TravelList() {
   return (
     <div className="items-container">
       {items.map((item) => (
-        <TravelCard key={item.id} plan={item} deleteItem={deleteItem} />
+        <TravelCard
+          key={item.id}
+          plan={item}
+          addItem={1}
+          deleteItem={deleteItem}
+        />
       ))}
     </div>
   );
