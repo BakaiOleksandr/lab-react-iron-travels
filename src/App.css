@@ -45,7 +45,6 @@
 .item-container {
   width: 60rem;
   height: 30rem;
-  border: 0.1rem solid black;
   margin: 1rem;
   display: flex;
   flex-direction: row;
@@ -53,6 +52,7 @@
   align-items: center;
   align-content: center;
   padding: 2rem;
+  box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;;
 }
 
 .image-container {
@@ -77,12 +77,25 @@
 }
 .item-description p {
   margin: 1rem 1rem;
-  font-style: italic;
 }
-.item-description p:last-child {
-  font-style: normal;
+.description{
+  font-style: italic;
+  color: grey;
+}
+.price {
   font-weight: bold;
 }
 .item-description span {
   font-weight: normal;
+}
+.premium-inclusive{
+  background-color: rgb(80, 28, 251);
+  color: white;
+  margin: 0 0 0 1rem;
+}
+.great-deal{
+  color: black;
+  background-color: rgb(159, 248, 33);
+  font-weight: bold;
+  margin: 0 0 0 1rem;
 }

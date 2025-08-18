@@ -8,7 +8,7 @@ function TravelList() {
     <div className="items-container">
       {items.map((item) => {
         return (
-          <div key={item.id} className="item-container">
+          <div className="item-container">
             <div className="image-container">
               <img src={item.image}></img>
             </div>
@@ -16,10 +16,19 @@ function TravelList() {
               <h3>
                 {item.destination} ({item.days} Days)
               </h3>
-              <p>{item.description}</p>
-              <p>
+              <p className='description'>{item.description}</p>
+              <p className='price'>
                 Price: <span>{item.parts[0].cost} €</span>
               </p>
+              <div className="">
+                {item.parts[0].cost >= 1500 && (
+                  <button className="premium-inclusive">Premium</button>
+                )}
+                {item.allInclusive && (
+                  <button className="premium-inclusive">All-Inclusive</button>
+                )}
+              </div>
+              {item.parts[0].cost<=350&&<button className='great-deal'>Great Deal</button>}
             </div>
           </div>
         );
