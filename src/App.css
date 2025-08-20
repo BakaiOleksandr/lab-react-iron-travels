@@ -32,14 +32,7 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-.page {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.fav-container {
-  width: 10%;
-}
+
 .text-iron {
   color: #0a035a;
 }

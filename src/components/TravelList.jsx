@@ -3,22 +3,21 @@ import {useState} from 'react';
 import TravelCard from './TravelCard';
 
 function TravelList() {
-  const [items, setItems] = useState(travelPlansData);
+  const [array, setItems] = useState(travelPlansData);
 
-  const deleteItem = (itemId) => {
-    const filteredItems = items.filter((item) => {
-      return item.id !== itemId;
+  const deleteItem = (arrayId) => {
+    const filteredItems = array.filter((arr) => {
+      return arr.id !== arrayId;
     });
     setItems(filteredItems);
   };
 
   return (
     <div className="items-container">
-      {items.map((item) => (
+      {array.map((arr) => (
         <TravelCard
-          key={item.id}
-          plan={item}
-          addItem={1}
+          key={arr.id}
+          plan={arr}
           deleteItem={deleteItem}
         />
       ))}
